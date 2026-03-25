@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Webpage</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            height: 100vh;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1000px;
+            backdrop-filter: blur(15px);
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            color: white;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 30px;
+        }
+
+        .navbar h1 {
+            font-size: 24px;
+        }
+
+        .nav-links a {
+            color: white;
+            margin-left: 20px;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #ffcc70;
+        }
+
+        .hero {
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .hero h2 {
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+
+        .hero p {
+            opacity: 0.8;
+            margin-bottom: 20px;
+        }
+
+        .btn {
+            padding: 12px 25px;
+            border-radius: 25px;
+            border: none;
+            background: #ffcc70;
+            color: black;
+            cursor: pointer;
+            transition: 0.3s;
+            font-weight: bold;
+        }
+
+        .btn:hover {
+            background: #fff;
+            transform: scale(1.05);
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-top: 40px;
+        }
+
+        .card {
+            padding: 20px;
+            border-radius: 15px;
+            background: rgba(255,255,255,0.15);
+            text-align: center;
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            background: rgba(255,255,255,0.25);
+        }
+
+        .card h3 {
+            margin-bottom: 10px;
+        }
+
+        .card p {
+            font-size: 14px;
+            opacity: 0.8;
+        }
+
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="navbar">
+        <h1>Adima AI</h1>
+        <div class="nav-links">
+            <a href="#">Home</a>
+            <a href="#">Features</a>
+            <a href="#">Contact</a>
+        </div>
+    </div>
+
+    <div class="hero">
+        <h2>Next-Level Image Upscaling</h2>
+        <p>Enhance your images up to 64K with AI-powered precision.</p>
+        <button class="btn">Get Started</button>
+    </div>
+
+    <div class="cards">
+        <div class="card">
+            <h3>⚡ Fast</h3>
+            <p>Process images in seconds with optimized AI.</p>
+        </div>
+
+        <div class="card">
+            <h3>🎯 Accurate</h3>
+            <p>Preserve details with advanced enhancement models.</p>
+        </div>
+
+        <div class="card">
+            <h3>📦 Batch</h3>
+            <p>Upscale multiple images at once effortlessly.</p>
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>
