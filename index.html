@@ -1,197 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Adima AI - Image Upscaler</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Heavy Performance Test Page</title>
 
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', sans-serif;
-        }
+<!-- ❌ Blocking multiple fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700&family=Montserrat&family=Open+Sans&display=swap" rel="stylesheet">
 
-        body {
-            background: #0f172a;
-            color: #fff;
-            line-height: 1.6;
-        }
+<style>
+/* ❌ Massive CSS */
+body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(45deg, #000, #111, #222);
+    color: white;
+    overflow-x: hidden;
+}
 
-        header {
-            display: flex;
-            justify-content: space-between;
-            padding: 20px 10%;
-            background: rgba(255,255,255,0.05);
-            backdrop-filter: blur(10px);
-            position: sticky;
-            top: 0;
-        }
+/* ❌ Expensive animations */
+@keyframes heavyAnimation {
+    0% { transform: translateX(0px) rotate(0deg); }
+    50% { transform: translateX(500px) rotate(180deg); }
+    100% { transform: translateX(0px) rotate(360deg); }
+}
 
-        header h1 {
-            color: #38bdf8;
-        }
+.box {
+    width: 200px;
+    height: 200px;
+    background: red;
+    margin: 20px;
+    animation: heavyAnimation 2s infinite linear;
+}
 
-        nav a {
-            color: #fff;
-            margin-left: 20px;
-            text-decoration: none;
-            transition: 0.3s;
-        }
+/* ❌ Thousands of selectors */
+.container div:nth-child(1) { color: red; }
+.container div:nth-child(2) { color: blue; }
+.container div:nth-child(3) { color: green; }
+/* repeat pattern artificially */
+.container div:nth-child(1000) { color: yellow; }
 
-        nav a:hover {
-            color: #38bdf8;
-        }
+</style>
 
-        .hero {
-            height: 90vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            background: linear-gradient(135deg, #0f172a, #1e293b);
-            padding: 20px;
-        }
-
-        .hero h2 {
-            font-size: 3rem;
-            margin-bottom: 20px;
-        }
-
-        .hero p {
-            max-width: 600px;
-            margin: auto;
-            margin-bottom: 20px;
-            color: #cbd5f5;
-        }
-
-        .btn {
-            padding: 12px 25px;
-            background: #38bdf8;
-            color: #000;
-            border: none;
-            border-radius: 25px;
-            cursor: pointer;
-            font-weight: bold;
-            transition: 0.3s;
-        }
-
-        .btn:hover {
-            background: #0ea5e9;
-        }
-
-        section {
-            padding: 80px 10%;
-        }
-
-        .features {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-        }
-
-        .card {
-            background: #1e293b;
-            padding: 20px;
-            border-radius: 15px;
-            transition: 0.3s;
-        }
-
-        .card:hover {
-            transform: translateY(-10px);
-            background: #334155;
-        }
-
-        .card h3 {
-            margin-bottom: 10px;
-            color: #38bdf8;
-        }
-
-        .about {
-            text-align: center;
-            max-width: 800px;
-            margin: auto;
-        }
-
-        footer {
-            text-align: center;
-            padding: 20px;
-            background: #020617;
-            color: #94a3b8;
-        }
-
-        @media (max-width: 768px) {
-            .hero h2 {
-                font-size: 2rem;
-            }
-        }
-    </style>
 </head>
 <body>
 
-<header>
-    <h1>Adima AI</h1>
-    <nav>
-        <a href="#">Home</a>
-        <a href="#features">Features</a>
-        <a href="#about">About</a>
-        <a href="#contact">Contact</a>
-    </nav>
-</header>
+<h1>🚨 Heavy Performance Test Page</h1>
 
-<section class="hero">
-    <div>
-        <h2>Upscale Images to 64K with AI</h2>
-        <p>Professional AI-powered image upscaler designed for creators, photographers, and developers. Enhance quality, remove noise, and scale without losing details.</p>
-        <button class="btn">Get Started</button>
-    </div>
-</section>
+<div class="container" id="container"></div>
 
-<section id="features">
-    <h2 style="text-align:center; margin-bottom:40px;">Features</h2>
-    <div class="features">
-        <div class="card">
-            <h3>16x Upscaling</h3>
-            <p>Increase image resolution up to 16x with stunning clarity.</p>
-        </div>
-        <div class="card">
-            <h3>Batch Processing</h3>
-            <p>Process multiple images simultaneously to save time.</p>
-        </div>
-        <div class="card">
-            <h3>Noise Reduction</h3>
-            <p>Automatically remove noise and enhance details.</p>
-        </div>
-        <div class="card">
-            <h3>Fast Performance</h3>
-            <p>Optimized AI models ensure fast and efficient results.</p>
-        </div>
-    </div>
-</section>
+<!-- ❌ Huge base64 image (simulated heavy payload) -->
+<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUA..." />
 
-<section id="about">
-    <div class="about">
-        <h2>About Adima AI</h2>
-        <p>
-            Adima AI is a next-generation image upscaling solution built for professionals.
-            With cutting-edge AI models, it delivers high-quality results while maintaining
-            performance and usability.
-        </p>
-    </div>
-</section>
+<script>
 
-<section id="contact">
-    <h2 style="text-align:center; margin-bottom:20px;">Contact</h2>
-    <div style="text-align:center;">
-        <p>Email: support@aiimageupscale.com</p>
-        <p>Website: aiimageupscale.com</p>
-    </div>
-</section>
+// ❌ BLOCKING JS (main thread freeze)
+const start = Date.now();
+while(Date.now() - start < 3000) {
+    // freeze for 3 seconds
+}
 
-<footer>
-    <p>© 2026 Adima AI | All Rights Reserved</p>
-</footer>
+// ❌ Create massive DOM (1000+ elements)
+const container = document.getElementById("container");
+for (let i = 0; i < 2000; i++) {
+    let div = document.createElement("div");
+    div.className = "box";
+    div.innerText = "Heavy Box " + i;
+    container.appendChild(div);
+}
+
+// ❌ Layout thrashing (forces reflow repeatedly)
+setInterval(() => {
+    const elements = document.querySelectorAll('.box');
+    elements.forEach(el => {
+        el.style.width = (Math.random() * 300) + "px";
+        el.offsetHeight; // force reflow
+    });
+}, 100);
+
+// ❌ Memory leak
+let leak = [];
+setInterval(() => {
+    leak.push(new Array(10000).fill("leak"));
+}, 200);
+
+// ❌ Scroll event heavy computation
+window.addEventListener('scroll', () => {
+    for (let i = 0; i < 1000000; i++) {}
+});
+
+// ❌ Multiple intervals
+setInterval(() => console.log("Heavy Task 1"), 500);
+setInterval(() => console.log("Heavy Task 2"), 700);
+setInterval(() => console.log("Heavy Task 3"), 900);
+
+// ❌ Large JSON processing
+let bigData = [];
+for (let i = 0; i < 50000; i++) {
+    bigData.push({ index: i, value: Math.random() });
+}
+JSON.stringify(bigData);
+
+</script>
 
 </body>
 </html>
