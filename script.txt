@@ -1,37 +1,18 @@
-// ❌ Blocking execution (main thread delay)
-const start = Date.now();
-while (Date.now() - start < 1500) {}
+window.addEventListener('DOMContentLoaded', () => {
+    console.log("Vortex Loaded");
 
-// ❌ Large unused dataset
-let bigData = [];
-for (let i = 0; i < 50000; i++) {
-    bigData.push({ index: i, value: Math.random() });
-}
+    const start = performance.now();
 
-// ❌ Layout shift (CLS issue)
-setTimeout(() => {
-    let banner = document.createElement("div");
-    banner.innerHTML = "<h2 style='background:red;color:white;padding:20px;text-align:center;'>Limited Offer!</h2>";
-    document.body.prepend(banner);
-}, 1200);
-
-// ❌ Heavy scroll handler
-window.addEventListener("scroll", () => {
-    for (let i = 0; i < 5000; i++) {}
+    // Blocking loop (same as original)
+    while (performance.now() - start < 2500) {
+        Math.random();
+    }
 });
 
-// ❌ Memory leak
-let leak = [];
-setInterval(() => {
-    leak.push(new Array(1000).fill("data"));
-}, 500);
-
-// ❌ Multiple timers
-setInterval(() => console.log("Task 1"), 1000);
-setInterval(() => console.log("Task 2"), 1500);
-
-// ❌ Forced reflow
-setInterval(() => {
-    document.body.style.padding = Math.random() * 10 + "px";
-    document.body.offsetHeight;
-}, 300);
+// Click animation
+document.querySelectorAll('.btn, .nav-item').forEach(el => {
+    el.addEventListener('click', () => {
+        el.style.opacity = "0.5";
+        setTimeout(() => el.style.opacity = "1", 150);
+    });
+});
