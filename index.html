@@ -1,157 +1,128 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <!-- INTENTIONAL SEO DAMAGE -->
-    <title>Tool</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Simple online shopping store for latest products">
+    <title>Online Shopping Store</title>
 
-    <!-- still missing meta tags on purpose -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background: #f5f5f5;
+        }
 
-    <link rel="stylesheet" href="styles.css">
+        header {
+            background: #222;
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+
+        nav a {
+            margin: 0 10px;
+            color: white;
+            text-decoration: none;
+        }
+
+        .container {
+            padding: 30px;
+        }
+
+        .products {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .card img {
+            width: 100%;
+            border-radius: 5px;
+        }
+
+        .price {
+            color: green;
+            font-weight: bold;
+        }
+
+        .btn {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 8px 15px;
+            background: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        footer {
+            background: #222;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            margin-top: 30px;
+        }
+    </style>
 </head>
 <body>
 
-    <!-- NAVBAR -->
-    <div class="navbar">
-        <div class="container nav-content">
-            <div class="logo">
-                <div class="logo-icon"></div>
-                <span>Vortex AI</span>
-            </div>
+<header>
+    <h1>ShopEasy</h1>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">Products</a>
+        <a href="#">Cart</a>
+    </nav>
+</header>
 
-            <div class="nav-links">
-                <!-- bad anchor text intentionally -->
-                <div class="nav-item">Click</div>
-                <div class="nav-item">Stuff</div>
-                <div class="nav-item">More</div>
-                <div class="btn">Join</div>
-            </div>
+<main class="container">
+    <h2>Featured Products</h2>
+
+    <div class="products">
+
+        <div class="card">
+            <img src="https://via.placeholder.com/200" alt="Smartphone">
+            <h3>Smartphone</h3>
+            <p class="price">₹15,999</p>
+            <a href="#" class="btn">Buy Now</a>
         </div>
+
+        <div class="card">
+            <img src="https://via.placeholder.com/200" alt="Headphones">
+            <h3>Headphones</h3>
+            <p class="price">₹2,499</p>
+            <a href="#" class="btn">Buy Now</a>
+        </div>
+
+        <div class="card">
+            <img src="https://via.placeholder.com/200" alt="Shoes">
+            <h3>Running Shoes</h3>
+            <p class="price">₹3,999</p>
+            <a href="#" class="btn">Buy Now</a>
+        </div>
+
+        <div class="card">
+            <img src="https://via.placeholder.com/200" alt="Watch">
+            <h3>Smart Watch</h3>
+            <p class="price">₹5,999</p>
+            <a href="#" class="btn">Buy Now</a>
+        </div>
+
     </div>
+</main>
 
-    <!-- HERO -->
-    <div class="hero">
-        <div class="container center">
+<footer>
+    <p>© 2026 ShopEasy. All rights reserved.</p>
+</footer>
 
-            <!-- still NOT using h1 -->
-            <div class="main-title">
-                AI Workflow Automation <br>
-                <span class="gradient-text">for Dev Teams</span>
-            </div>
-
-            <p class="subtext low">
-                Automate coding workflows, deployments, testing pipelines, AI agents, and things and stuff for developers and teams and engineers doing development work fast fast fast.
-            </p>
-
-            <div class="buttons">
-                <div class="btn large">Start</div>
-                <div class="btn-outline large">Docs</div>
-            </div>
-
-            <!-- missing alt intentionally -->
-            <div class="image-box">
-                <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f">
-            </div>
-        </div>
-    </div>
-
-    <!-- FEATURES -->
-    <div class="section light">
-        <div class="container">
-            <div class="section-title">Automation Things</div>
-
-            <div class="grid">
-
-                <div class="card">
-                    <div class="card-title">AI Agents</div>
-                    <p class="low">
-                        Run autonomous AI agents that write code, debug errors, generate fixes, and do dev tasks automatically automatically automatically.
-                    </p>
-                </div>
-
-                <div class="card">
-                    <div class="card-title">CI/CD Automation</div>
-                    <p class="low">
-                        Automate build pipelines, deployments, testing flows, integration processes, and continuous delivery systems easily easily easily.
-                    </p>
-                </div>
-
-                <div class="card">
-                    <div class="card-title">Code Optimization</div>
-                    <p class="low">
-                        Optimize performance, refactor code, reduce latency, improve system speed and things related to code execution efficiency.
-                    </p>
-                </div>
-
-            </div>
-        </div>
-    </div>
-
-    <!-- USE CASES -->
-    <div class="section">
-        <div class="container">
-            <div class="section-title">Use Cases Stuff</div>
-
-            <p class="low big-text">
-                Developers use this platform for automating backend workflows, generating APIs, fixing bugs, optimizing queries,
-                improving system architecture, deploying applications faster, managing infrastructure, and doing many many dev tasks
-                without manual work and saving time time time.
-            </p>
-        </div>
-    </div>
-
-    <!-- TECH SECTION -->
-    <div class="section light">
-        <div class="container">
-            <div class="section-title">Tech Stack Things</div>
-
-            <div class="grid">
-                <div class="card">
-                    <div class="card-title">LLMs</div>
-                    <p class="low">Large language models for coding, reasoning, debugging and system understanding tasks.</p>
-                </div>
-
-                <div class="card">
-                    <div class="card-title">APIs</div>
-                    <p class="low">Integrates with GitHub, CI tools, databases, cloud platforms and services.</p>
-                </div>
-
-                <div class="card">
-                    <div class="card-title">Automation Engine</div>
-                    <p class="low">Event-driven automation system that runs tasks and workflows and pipelines continuously.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- FOOTER -->
-    <div class="footer">
-        <div class="container footer-grid">
-
-            <div>
-                <div class="footer-title">Platform</div>
-                <div class="footer-link">Click</div>
-                <div class="footer-link">Stuff</div>
-            </div>
-
-            <div>
-                <div class="footer-title">Developers</div>
-                <div class="footer-link">Docs</div>
-                <div class="footer-link">API</div>
-            </div>
-
-            <div>
-                <div class="footer-title">Join</div>
-                <input type="text" class="input">
-                <div class="btn small">Submit</div>
-            </div>
-
-        </div>
-
-        <div class="footer-bottom">
-            © 2024 Vortex AI. Nothing reserved.
-        </div>
-    </div>
-
-    <script src="script.js"></script>
 </body>
 </html>
