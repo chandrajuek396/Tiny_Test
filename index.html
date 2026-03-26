@@ -3,126 +3,293 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Simple online shopping store for latest products">
-    <title>Online Shopping Store</title>
-
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            background: #f5f5f5;
-        }
-
-        header {
-            background: #222;
-            color: white;
-            padding: 15px;
-            text-align: center;
-        }
-
-        nav a {
-            margin: 0 10px;
-            color: white;
-            text-decoration: none;
-        }
-
-        .container {
-            padding: 30px;
-        }
-
-        .products {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 20px;
-        }
-
-        .card {
-            background: white;
-            padding: 15px;
-            border-radius: 8px;
-            text-align: center;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        }
-
-        .card img {
-            width: 100%;
-            border-radius: 5px;
-        }
-
-        .price {
-            color: green;
-            font-weight: bold;
-        }
-
-        .btn {
-            display: inline-block;
-            margin-top: 10px;
-            padding: 8px 15px;
-            background: #007bff;
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-        }
-
-        footer {
-            background: #222;
-            color: white;
-            text-align: center;
-            padding: 10px;
-            margin-top: 30px;
-        }
-    </style>
+    <title>NEON | Future of Tech</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./styles.css" type="text/css">
 </head>
 <body>
 
-<header>
-    <h1>ShopEasy</h1>
-    <nav>
-        <a href="#">Home</a>
-        <a href="#">Products</a>
-        <a href="#">Cart</a>
-    </nav>
-</header>
-
-<main class="container">
-    <h2>Featured Products</h2>
-
-    <div class="products">
-
-        <div class="card">
-            <img src="https://via.placeholder.com/200" alt="Smartphone">
-            <h3>Smartphone</h3>
-            <p class="price">₹15,999</p>
-            <a href="#" class="btn">Buy Now</a>
-        </div>
-
-        <div class="card">
-            <img src="https://via.placeholder.com/200" alt="Headphones">
-            <h3>Headphones</h3>
-            <p class="price">₹2,499</p>
-            <a href="#" class="btn">Buy Now</a>
-        </div>
-
-        <div class="card">
-            <img src="https://via.placeholder.com/200" alt="Shoes">
-            <h3>Running Shoes</h3>
-            <p class="price">₹3,999</p>
-            <a href="#" class="btn">Buy Now</a>
-        </div>
-
-        <div class="card">
-            <img src="https://via.placeholder.com/200" alt="Watch">
-            <h3>Smart Watch</h3>
-            <p class="price">₹5,999</p>
-            <a href="#" class="btn">Buy Now</a>
-        </div>
-
+    <div class="announcement-bar">
+        Complimentary shipping on all orders over $150
     </div>
-</main>
 
-<footer>
-    <p>© 2026 ShopEasy. All rights reserved.</p>
-</footer>
+    <nav id="navbar">
+        <div class="container nav-content">
+            <div class="logo">NEON<span>.</span></div>
 
+            <div class="nav-links">
+                <a href="#">Vision</a>
+                <a href="#shop">Store</a>
+                <a href="#">Support</a>
+            </div>
+
+            <div class="nav-icons">
+                <button><i class="fa-solid fa-magnifying-glass"></i></button>
+                <button class="cart-icon-wrapper" onclick="toggleCart()">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span id="cart-count">0</span>
+                </button>
+                <button class="md-hidden"><i class="fa-solid fa-bars"></i></button>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-overlay"></div>
+        <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&q=80&w=2070" class="hero-img" alt="Hero">
+        <div class="container">
+            <div class="hero-content">
+                <span class="badge">Summer Collection 2024</span>
+                <h1 class="hero-title">BEYOND <br><span>LIMITS.</span></h1>
+                <p class="hero-desc">Engineered for high performance. Designed for the everyday visionary. Experience the new Air-Neon series.</p>
+                <div class="hero-btns">
+                    <a href="#shop" class="btn btn-primary">Explore Now</a>
+                    <a href="#" class="btn btn-outline">Watch Film</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="categories">
+        <div class="container">
+            <div class="category-grid">
+                <div class="category-card">
+                    <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?q=80&w=1000" alt="Audio">
+                    <div class="overlay"></div>
+                    <div class="category-info">
+                        <h3>Audio</h3>
+                        <p>Studio Quality</p>
+                    </div>
+                </div>
+                <div class="category-card">
+                    <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?q=80&w=1000" alt="Wearables">
+                    <div class="overlay"></div>
+                    <div class="category-info">
+                        <h3>Wearables</h3>
+                        <p>Track Everything</p>
+                    </div>
+                </div>
+                <div class="category-card">
+                    <img src="https://as2.ftcdn.net/v2/jpg/01/40/79/91/1000_F_140799119_sieLHOLxeWRRbqaVzlVfEEqwpP4TCFuu.jpg" alt="Optics">
+                    <div class="overlay"></div>
+                    <div class="category-info">
+                        <h3>Optics</h3>
+                        <p>Perfect Frame</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="shop" class="shop-section">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-title">
+                    <h2>CURATED ESSENTIALS</h2>
+                    <p>Selected pieces built to last a lifetime.</p>
+                </div>
+                <div class="filter-btns">
+                    <button class="filter-btn">Trending</button>
+                    <button class="filter-btn">Newest</button>
+                </div>
+            </div>
+
+            <div class="product-grid" id="product-container">
+                <!-- Injected via JS -->
+            </div>
+        </div>
+    </section>
+
+    <section class="features">
+        <div class="container">
+            <div class="features-grid">
+                <div class="feature-item">
+                    <i class="fa-solid fa-truck-fast"></i>
+                    <h4>Hyper-Fast Shipping</h4>
+                    <p>Receive your order within 24 hours in most metropolitan areas across the globe.</p>
+                </div>
+                <div class="feature-item">
+                    <i class="fa-solid fa-shield-halved"></i>
+                    <h4>Carbon Neutral</h4>
+                    <p>Every purchase is 100% offset through reforestation projects in the Amazon.</p>
+                </div>
+                <div class="feature-item">
+                    <i class="fa-solid fa-rotate-left"></i>
+                    <h4>Hassle-free Returns</h4>
+                    <p>Not in love? Return within 90 days for a full refund, no questions asked.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="#" class="logo">NEON<span>.</span></a>
+                    <p>Redefining the digital lifestyle through minimalist engineering and sustainable craftsmanship.</p>
+                </div>
+                <div class="footer-links">
+                    <h5>Collections</h5>
+                    <ul>
+                        <li><a href="#">Audio Gear</a></li>
+                        <li><a href="#">Visual Arts</a></li>
+                        <li><a href="#">Office Setup</a></li>
+                        <li><a href="#">Accessories</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h5>Company</h5>
+                    <ul>
+                        <li><a href="#">Our Vision</a></li>
+                        <li><a href="#">Sustainability</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Privacy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h5>Subscribe</h5>
+                    <div class="subscribe-form">
+                        <input type="email" placeholder="Email Address">
+                        <button>Join</button>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2024 NEON TECHNOLOGIES INC. ALL RIGHTS RESERVED.</p>
+                <div class="social-links">
+                    <a href="#">INSTAGRAM</a>
+                    <a href="#">TWITTER</a>
+                    <a href="#">TIKTOK</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div id="cart-sidebar">
+        <div class="cart-header">
+            <h2>YOUR CART</h2>
+            <button onclick="toggleCart()"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+        <div id="cart-items">
+            <!-- Dynamic Items -->
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Estimated Total</span>
+                <span id="cart-total-price">$0.00</span>
+            </div>
+            <button class="checkout-btn">Checkout Now</button>
+        </div>
+    </div>
+
+    <div id="notification">Added to Bag</div>
+
+    <script>
+        const products = [
+            { id: 1, name: "Neon Buds Pro", price: 199, category: "Audio", image: "https://images.unsplash.com/photo-1590658268037-6bf12165a8df?q=80&w=1000" },
+            { id: 2, name: "Smart Horizon", price: 349, category: "Wearables", image: "https://as1.ftcdn.net/v2/jpg/02/90/32/90/1000_F_290329002_t6Bo5sTXSZjNkx3GJNbalZ3suK7W1E9l.jpg" },
+            { id: 3, name: "Capture X1", price: 899, category: "Optics", image: "https://images.unsplash.com/photo-1516035069371-29a1b244cc32?q=80&w=1000" },
+            { id: 4, name: "Vibe Soundbar", price: 549, category: "Audio", image: "https://images.unsplash.com/photo-1545454675-3531b543be5d?q=80&w=1000" },
+            { id: 5, name: "Desk Light One", price: 129, category: "Home", image: "https://images.unsplash.com/photo-1534073828943-f801091bb18c?q=80&w=1000" },
+            { id: 6, name: "Power Grid", price: 89, category: "Accessories", image: "https://as1.ftcdn.net/v2/jpg/04/60/05/50/1000_F_460055074_zqvL66HcykSDxBF8jP93tm1BWl0ImB69.jpg" },
+            { id: 7, name: "Mag Tablet Case", price: 59, category: "Accessories", image: "https://images.unsplash.com/photo-1542751371-adc38448a05e?q=80&w=1000" },
+            { id: 8, name: "Studio 4K Monitor", price: 1299, category: "Displays", image: "https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?q=80&w=1000" }
+        ];
+
+        let cart = [];
+
+        function renderProducts() {
+            const container = document.getElementById('product-container');
+            container.innerHTML = products.map(p => `
+                <div class="product-card">
+                    <div class="product-img-wrapper">
+                        <img src="${p.image}" alt="${p.name}">
+                        <button onclick="addToCart(${p.id})" class="quick-add">
+                            <i class="fa-solid fa-plus"></i> Add to Bag
+                        </button>
+                    </div>
+                    <div class="product-details">
+                        <div>
+                            <p class="product-cat">${p.category}</p>
+                            <h3 class="product-name">${p.name}</h3>
+                        </div>
+                        <span class="product-price">$${p.price}</span>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        function toggleCart() {
+            document.getElementById('cart-sidebar').classList.toggle('open');
+        }
+
+        function addToCart(id) {
+            const product = products.find(p => p.id === id);
+            cart.push(product);
+            updateCartUI();
+            showNotification();
+        }
+
+        function updateCartUI() {
+            const itemsContainer = document.getElementById('cart-items');
+            const cartCount = document.getElementById('cart-count');
+            const cartTotal = document.getElementById('cart-total-price');
+            
+            cartCount.innerText = cart.length;
+
+            if (cart.length === 0) {
+                itemsContainer.innerHTML = `
+                    <div style="text-align: center; padding: 5rem 0; color: #94a3b8;">
+                        <i class="fa-solid fa-cart-shopping" style="font-size: 3rem; margin-bottom: 1rem; display: block;"></i>
+                        <p>Your bag is currently empty.</p>
+                    </div>
+                `;
+                cartTotal.innerText = `$0.00`;
+                return;
+            }
+
+            itemsContainer.innerHTML = cart.map((item, index) => `
+                <div class="cart-item">
+                    <img src="${item.image}">
+                    <div class="cart-item-info">
+                        <h4>${item.name}</h4>
+                        <p>$${item.price}</p>
+                    </div>
+                    <button onclick="removeFromCart(${index})" style="color: #cbd5e1; transition: 0.3s;"><i class="fa-solid fa-trash-can"></i></button>
+                </div>
+            `).join('');
+
+            const total = cart.reduce((sum, item) => sum + item.price, 0);
+            cartTotal.innerText = `$${total.toLocaleString()}`;
+        }
+
+        function removeFromCart(index) {
+            cart.splice(index, 1);
+            updateCartUI();
+        }
+
+        function showNotification() {
+            const el = document.getElementById('notification');
+            el.style.opacity = '1';
+            setTimeout(() => {
+                el.style.opacity = '0';
+            }, 2000);
+        }
+
+        window.onload = () => {
+            renderProducts();
+            updateCartUI();
+        };
+
+        window.addEventListener('scroll', () => {
+            const nav = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                nav.classList.add('scrolled');
+            } else {
+                nav.classList.remove('scrolled');
+            }
+        });
+    </script>
 </body>
 </html>
