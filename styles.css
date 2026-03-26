@@ -1,0 +1,75 @@
+/* ❌ Large, unoptimized CSS */
+
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: #f4f4f4;
+}
+
+/* ❌ Inefficient universal selector */
+* {
+    transition: all 0.3s ease;
+}
+
+header {
+    background: #111827;
+    color: white;
+    padding: 20px 10%;
+    display: flex;
+    justify-content: space-between;
+}
+
+nav a {
+    color: white;
+    margin-left: 20px;
+    text-decoration: none;
+}
+
+.hero {
+    height: 100vh;
+    background: url('https://picsum.photos/1600/900') center/cover no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.section {
+    padding: 80px 10%;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.card {
+    background: white;
+    padding: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+/* ❌ Expensive animations */
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+    100% { transform: translateY(0px); }
+}
+
+.card {
+    animation: float 2s infinite;
+}
+
+/* ❌ Duplicate + unused styles */
+.unused1 { color: red; }
+.unused2 { color: blue; }
+.unused3 { color: green; }
+.unused4 { color: yellow; }
+
+/* ❌ Deep selectors */
+body div section .grid .card img {
+    border-radius: 10px;
+}
+
+/* ❌ No responsive optimization */
