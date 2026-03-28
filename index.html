@@ -1,189 +1,215 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>NEON | Future of Tech</title>
-
-    <!-- intentionally missing meta description -->
-    <!-- no canonical, no og tags, no structured data -->
-
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="./styles.css">
-
-    <style>
-        /* unnecessary inline css to reduce SEO quality */
-        .dummy{display:block}
-    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Shopping | NEON - Future of Tech & Gear</title>
+    <meta name="description" content="Discover the future of tech at NEON. Shop our summer collection of audio, wearables, and optics. Fast shipping and eco-friendly products.">
+    <meta name="keywords" content="online shopping, electronics, tech gear, audio, wearables, optics">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://chandrajuek396.github.io/Tiny_Test/">
+    <meta property="og:title" content="Online Shopping | NEON - Future of Tech & Gear">
+    <meta property="og:description" content="Discover the future of tech at NEON. Shop our summer collection of audio, wearables, and optics.">
+    <meta property="og:url" content="https://chandrajuek396.github.io/Tiny_Test/">
+    <meta name="twitter:card" content="summary_large_image">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Store",
+      "name": "NEON",
+      "description": "Future of Tech & Gear",
+      "url": "https://chandrajuek396.github.io/Tiny_Test/"
+    }
+    </script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+<link href="./styles.css" rel="stylesheet"/>
 </head>
-
 <body>
-
     <div class="announcement-bar">
         Complimentary shipping on all orders over $150
     </div>
 
-    <nav id="navbar">
+    <nav>
         <div class="container nav-content">
-            <div class="logo">NEON<span>.</span></div>
-
+            <div class="logo"><span>NEON</span><span>.</span></div>
             <div class="nav-links">
                 <a href="#">Vision</a>
                 <a href="#shop">Store</a>
                 <a href="#">Support</a>
+                <a href="blog.html">Blog</a>
             </div>
-
             <div class="nav-icons">
                 <button><i class="fa-solid fa-magnifying-glass"></i></button>
-                <button class="cart-icon-wrapper" onclick="toggleCart()">
-                    <i class="fa-solid fa-cart-shopping"></i>
-                    <span id="cart-count">0</span>
-                </button>
+                <button class="cart-icon-wrapper"><i class="fa-solid fa-cart-shopping"></i><span id="cart-count">0</span></button>
                 <button class="md-hidden"><i class="fa-solid fa-bars"></i></button>
             </div>
         </div>
     </nav>
 
-    <header class="hero">
-        <div class="hero-overlay"></div>
-
-        <!-- removed alt text intentionally -->
-        <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff" class="hero-img">
-
-        <div class="container">
-            <div class="hero-content">
-                <span class="badge">Summer Collection 2024</span>
-
-                <!-- weaker heading -->
-                <h1 class="hero-title">LIMITS.</h1>
-
-                <!-- repetitive low-quality content -->
-                <p class="hero-desc">
-                    Tech future tech future tech future tech future tech future tech future tech future tech future.
-                </p>
-
-                <div class="hero-btns">
-                    <a href="#shop" class="btn btn-primary">Explore</a>
-                    <a href="#" class="btn btn-outline">Watch</a>
+    <main>
+        <section class="hero">
+            <div class="hero-image">
+                <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff" alt="Stylish red high-performance sneakers">
+            </div>
+            <div class="container">
+                <div class="hero-content">
+                    <span class="badge">Summer Collection 2024</span>
+                    <h1>Limitless Future of Online Shopping</h1>
+                    <p>Experience the pinnacle of innovation with our curated selection of high-performance tech gadgets designed for the modern world.</p>
+                    <div class="hero-actions">
+                        <a href="#shop" class="btn btn-primary">Explore</a>
+                        <a href="#" class="btn btn-outline">Watch</a>
+                    </div>
                 </div>
             </div>
-        </div>
-    </header>
+        </section>
 
-    <section class="categories">
-        <div class="container">
-            <div class="category-grid">
-
-                <div class="category-card">
-                    <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e">
-                    <div class="overlay"></div>
-                    <div class="category-info">
-                        <h3>Audio</h3>
-                        <p>Audio audio audio audio audio</p>
-                    </div>
-                </div>
-
-                <div class="category-card">
-                    <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30">
-                    <div class="overlay"></div>
-                    <div class="category-info">
-                        <h3>Wearables</h3>
-                        <p>Wearables wearables wearables wearables</p>
-                    </div>
-                </div>
-
-                <div class="category-card">
-                    <img src="https://as2.ftcdn.net/v2/jpg/01/40/79/91/1000_F_140799119_sieLHOLxeWRRbqaVzlVfEEqwpP4TCFuu.jpg">
-                    <div class="overlay"></div>
-                    <div class="category-info">
-                        <h3>Optics</h3>
-                        <p>Optics optics optics optics optics</p>
-                    </div>
-                </div>
-
+        <section class="categories container">
+            <div class="category-card">
+                <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e" alt="Premium wireless noise-canceling headphones">
+                <h3>Audio</h3>
+                <p>High-fidelity sound systems for the ultimate listening experience.</p>
             </div>
-        </div>
-    </section>
+            <div class="category-card">
+                <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30" alt="Advanced wearable smartwatch with health tracking">
+                <h3>Wearables</h3>
+                <p>Stay connected with our latest range of smart wearable devices.</p>
+            </div>
+            <div class="category-card">
+                <img src="https://as2.ftcdn.net/v2/jpg/01/40/79/91/1000_F_140799119_sieLHOLxeWRRbqaVzlVfEEqwpP4TCFuu.jpg" alt="High-precision professional optical camera lens">
+                <h3>Optics</h3>
+                <p>Capture every detail with our precision-engineered optical lenses.</p>
+            </div>
+        </section>
 
-    <section id="shop" class="shop-section">
-        <div class="container">
+        <section id="shop" class="products container">
             <div class="section-header">
-                <div class="section-title">
-                    <!-- duplicate headings -->
-                    <h2>PRODUCTS</h2>
-                    <h2>PRODUCTS</h2>
-
-                    <p>Products products products products products products.</p>
-                </div>
-
-                <div class="filter-btns">
-                    <button class="filter-btn">Trending</button>
-                    <button class="filter-btn">Trending</button>
-                </div>
+                <h2>Our Best Selling Tech Products</h2>
+                <p>Browse our selection of top-rated products products products.</p>
+            </div>
+            
+            <div class="product-filters">
+                <button class="filter-btn active">Trending</button>
+                <button class="filter-btn">New Arrivals</button>
             </div>
 
-            <div class="product-grid" id="product-container"></div>
-        </div>
-    </section>
-
-    <section class="features">
-        <div class="container">
-            <div class="features-grid">
-
-                <div class="feature-item">
-                    <i class="fa-solid fa-truck-fast"></i>
-                    <h4>Shipping</h4>
-                    <p>Fast fast fast fast fast fast fast fast fast fast.</p>
+            <div class="product-grid">
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1590658268037-6bf12165a8df" alt="Modern professional tech accessory">
+                    </div>
+                    <h3>Premium Tech Item</h3>
+                    <p class="price">$100</p>
                 </div>
-
-                <div class="feature-item">
-                    <i class="fa-solid fa-shield-halved"></i>
-                    <h4>Eco</h4>
-                    <p>Eco eco eco eco eco eco eco eco eco eco.</p>
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32" alt="Precision optical equipment for photography">
+                    </div>
+                    <h3>Advanced Optics Item</h3>
+                    <p class="price">$200</p>
                 </div>
-
-                <div class="feature-item">
-                    <i class="fa-solid fa-rotate-left"></i>
-                    <h4>Return</h4>
-                    <p>Return return return return return return.</p>
-                </div>
-
             </div>
-        </div>
-    </section>
+        </section>
+
+        <section class="features container">
+            <div class="feature-item">
+                <h4>Reliable Shipping</h4>
+                <p>Fast fast fast fast fast fast fast fast fast fast delivery on all items.</p>
+            </div>
+            <div class="feature-item">
+                <h4>Eco Conscious</h4>
+                <p>Eco eco eco eco eco eco eco eco eco eco friendly sustainable materials.</p>
+            </div>
+            <div class="feature-item">
+                <h4>Easy Returns</h4>
+                <p>Return return return return return return within 30 days hassle-free.</p>
+            </div>
+        </section>
+
+        <section id="faq" style="padding: 50px 20px; background: #f9f9f9;">
+            <div class="container">
+                <h2 style="text-align: center; margin-bottom: 30px;">Frequently Asked Questions</h2>
+                <div style="max-width: 800px; margin: auto;">
+                    <div style="margin-bottom: 25px;">
+                        <strong>How long does shipping take?</strong>
+                        <p>Orders over $150 qualify for complimentary fast shipping, typically arriving within 3-5 business days.</p>
+                    </div>
+                    <div style="margin-bottom: 25px;">
+                        <strong>What is your return policy for tech gear?</strong>
+                        <p>We offer a hassle-free return policy within 30 days of purchase for all our tech products.</p>
+                    </div>
+                    <div style="margin-bottom: 25px;">
+                        <strong>Are your products eco-friendly?</strong>
+                        <p>Yes, NEON is committed to sustainability, using eco-friendly materials and packaging wherever possible.</p>
+                    </div>
+                    <div style="margin-bottom: 25px;">
+                        <strong>Do you offer international shipping for online shopping?</strong>
+                        <p>Currently, we ship to most major regions worldwide. Please check our checkout page for availability in your country.</p>
+                    </div>
+                </div>
+                <script type="application/ld+json">
+                {
+                  "@context": "https://schema.org",
+                  "@type": "FAQPage",
+                  "mainEntity": [{
+                    "@type": "Question",
+                    "name": "How long does shipping take?",
+                    "acceptedAnswer": {
+                      "@type": "Answer",
+                      "text": "Orders over $150 qualify for complimentary fast shipping, typically arriving within 3-5 business days."
+                    }
+                  }, {
+                    "@type": "Question",
+                    "name": "What is your return policy for tech gear?",
+                    "acceptedAnswer": {
+                      "@type": "Answer",
+                      "text": "We offer a hassle-free return policy within 30 days of purchase for all our tech products."
+                    }
+                  }, {
+                    "@type": "Question",
+                    "name": "Are your products eco-friendly?",
+                    "acceptedAnswer": {
+                      "@type": "Answer",
+                      "text": "Yes, NEON is committed to sustainability, using eco-friendly materials and packaging wherever possible."
+                    }
+                  }, {
+                    "@type": "Question",
+                    "name": "Do you offer international shipping for online shopping?",
+                    "acceptedAnswer": {
+                      "@type": "Answer",
+                      "text": "Currently, we ship to most major regions worldwide. Please check our checkout page for availability in your country."
+                    }
+                  }]
+                }
+                </script>
+            </div>
+        </section>
+    </main>
 
     <footer>
         <div class="container">
-
             <div class="footer-grid">
-
                 <div class="footer-brand">
-                    <a href="#" class="logo">NEON<span>.</span></a>
-
-                    <!-- repetitive low value content -->
-                    <p>Tech tech tech tech tech tech tech tech tech tech tech tech.</p>
+                    <a class="logo" href="#"><span>NEON</span><span>.</span></a>
+                    <p>Experience the future of tech with our curated selection of innovative devices for modern life.</p>
                 </div>
-
                 <div class="footer-links">
-                    <h5>Links</h5>
+                    <h5>Quick Links</h5>
                     <ul>
                         <li><a href="#">Link</a></li>
                         <li><a href="#">Link</a></li>
                     </ul>
                 </div>
-
             </div>
-
             <div class="footer-bottom">
-                <p>© NEON</p>
-
+                <p>© 2024 NEON</p>
                 <div class="social-links">
                     <a href="#">SOCIAL</a>
                 </div>
             </div>
-
         </div>
     </footer>
-
-    <script>
+<script>
         // no defer / async intentionally
 
         const products = [
@@ -217,6 +243,5 @@
             renderProducts();
         };
     </script>
-
 </body>
 </html>
