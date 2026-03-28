@@ -1,189 +1,140 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>NEON | Future of Tech</title>
-
-    <!-- intentionally missing meta description -->
-    <!-- no canonical, no og tags, no structured data -->
-
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="./styles.css">
-
-    <style>
-        /* unnecessary inline css to reduce SEO quality */
-        .dummy{display:block}
-    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEON | Premium Online Shopping for Future Tech & Wearables</title>
+    <meta name="description" content="Experience the future of tech at NEON. Discover premium audio, wearables, and optics with our exclusive online shopping collection. Fast shipping and eco-friendly packaging.">
+    <meta name="keywords" content="online shopping, tech store, audio wearables, future tech, NEON electronics">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://chandrajuek396.github.io/Tiny_Test/">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="NEON | Premium Online Shopping for Future Tech">
+    <meta property="og:description" content="Discover the future of tech at NEON. Premium audio, wearables, and optics available for online shopping.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://chandrajuek396.github.io/Tiny_Test/">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1523275335684-37898b6baf30">
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="NEON | Tech Online Shopping">
+    <meta name="twitter:description" content="Experience the future of tech at NEON. Shop our exclusive collection today.">
+    
+    <!-- JSON-LD -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Store",
+      "name": "NEON",
+      "description": "Premium online shopping for future tech gadgets and wearables.",
+      "url": "https://chandrajuek396.github.io/Tiny_Test/",
+      "image": "https://images.unsplash.com/photo-1523275335684-37898b6baf30"
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [{
+        "@type": "Question",
+        "name": "Is online shopping safe at NEON?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, we use industry-standard encryption to ensure your online shopping experience is secure and your data is protected."
+        }
+      }, {
+        "@type": "Question",
+        "name": "What are the benefits of tech online shopping?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Online shopping at NEON gives you access to exclusive future-tech products, detailed specifications, and fast doorstep delivery."
+        }
+      }, {
+        "@type": "Question",
+        "name": "Do you offer international shipping for online orders?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We currently offer domestic shipping and are working to expand our online shopping reach to international customers soon."
+        }
+      }]
+    }
+    </script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+<link href="./styles.css" rel="stylesheet"/>
 </head>
-
 <body>
-
-    <div class="announcement-bar">
-        Complimentary shipping on all orders over $150
-    </div>
-
-    <nav id="navbar">
-        <div class="container nav-content">
-            <div class="logo">NEON<span>.</span></div>
-
-            <div class="nav-links">
-                <a href="#">Vision</a>
-                <a href="#shop">Store</a>
-                <a href="#">Support</a>
-            </div>
-
-            <div class="nav-icons">
-                <button><i class="fa-solid fa-magnifying-glass"></i></button>
-                <button class="cart-icon-wrapper" onclick="toggleCart()">
-                    <i class="fa-solid fa-cart-shopping"></i>
-                    <span id="cart-count">0</span>
-                </button>
-                <button class="md-hidden"><i class="fa-solid fa-bars"></i></button>
-            </div>
+    <nav>
+        <div class="logo">NEON.</div>
+        <div class="nav-links">
+            <a href="#">Vision</a>
+            <a href="#shop">Store</a>
+            <a href="#">Support</a>
+            <a href="blog.html">Blog</a>
         </div>
     </nav>
 
-    <header class="hero">
-        <div class="hero-overlay"></div>
-
-        <!-- removed alt text intentionally -->
-        <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff" class="hero-img">
-
-        <div class="container">
-            <div class="hero-content">
-                <span class="badge">Summer Collection 2024</span>
-
-                <!-- weaker heading -->
-                <h1 class="hero-title">LIMITS.</h1>
-
-                <!-- repetitive low-quality content -->
-                <p class="hero-desc">
-                    Tech future tech future tech future tech future tech future tech future tech future tech future.
-                </p>
-
-                <div class="hero-btns">
-                    <a href="#shop" class="btn btn-primary">Explore</a>
-                    <a href="#" class="btn btn-outline">Watch</a>
-                </div>
-            </div>
+    <header>
+        <h1>Future Tech Online Shopping: No LIMITS.</h1>
+        <p>Experience tech future: high-performance gadgets for your digital lifestyle.</p>
+        <div class="hero-btns">
+            <a href="#shop">Explore Collection</a>
+            <a href="#">Watch Promo</a>
         </div>
     </header>
 
     <section class="categories">
-        <div class="container">
-            <div class="category-grid">
-
-                <div class="category-card">
-                    <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e">
-                    <div class="overlay"></div>
-                    <div class="category-info">
-                        <h3>Audio</h3>
-                        <p>Audio audio audio audio audio</p>
-                    </div>
-                </div>
-
-                <div class="category-card">
-                    <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30">
-                    <div class="overlay"></div>
-                    <div class="category-info">
-                        <h3>Wearables</h3>
-                        <p>Wearables wearables wearables wearables</p>
-                    </div>
-                </div>
-
-                <div class="category-card">
-                    <img src="https://as2.ftcdn.net/v2/jpg/01/40/79/91/1000_F_140799119_sieLHOLxeWRRbqaVzlVfEEqwpP4TCFuu.jpg">
-                    <div class="overlay"></div>
-                    <div class="category-info">
-                        <h3>Optics</h3>
-                        <p>Optics optics optics optics optics</p>
-                    </div>
-                </div>
-
-            </div>
+        <div class="category-card">
+            <h2>Audio</h2>
+            <p>High-fidelity audio gear for the ultimate online shopping experience.</p>
+            <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e" alt="High-quality wireless headphones available for online shopping">
         </div>
-    </section>
-
-    <section id="shop" class="shop-section">
-        <div class="container">
-            <div class="section-header">
-                <div class="section-title">
-                    <!-- duplicate headings -->
-                    <h2>PRODUCTS</h2>
-                    <h2>PRODUCTS</h2>
-
-                    <p>Products products products products products products.</p>
-                </div>
-
-                <div class="filter-btns">
-                    <button class="filter-btn">Trending</button>
-                    <button class="filter-btn">Trending</button>
-                </div>
-            </div>
-
-            <div class="product-grid" id="product-container"></div>
+        <div class="category-card">
+            <h2>Wearables</h2>
+            <p>Premium smart wearables to enhance your tech-focused lifestyle and fitness.</p>
+            <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30" alt="Modern smartwatch for tech online shopping">
+        </div>
+        <div class="category-card">
+            <h2>Optics</h2>
+            <p>Advanced optics and future-proof eyewear for tech enthusiasts and creators.</p>
+            <img src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32" alt="Professional camera lens and optics for online shoppers">
         </div>
     </section>
 
     <section class="features">
-        <div class="container">
-            <div class="features-grid">
+        <div class="feature">
+            <h3>Shipping</h3>
+            <p>Fast, reliable shipping on all your online shopping orders over $150.</p>
+        </div>
+        <div class="feature">
+            <h3>Eco-Friendly</h3>
+            <p>Our packaging is 100% recyclable, making your online shopping sustainable.</p>
+        </div>
+        <div class="feature">
+            <h3>Easy Returns</h3>
+            <p>Enjoy a hassle-free 30-day return policy on all our tech products.</p>
+        </div>
+    </section>
 
-                <div class="feature-item">
-                    <i class="fa-solid fa-truck-fast"></i>
-                    <h4>Shipping</h4>
-                    <p>Fast fast fast fast fast fast fast fast fast fast.</p>
-                </div>
-
-                <div class="feature-item">
-                    <i class="fa-solid fa-shield-halved"></i>
-                    <h4>Eco</h4>
-                    <p>Eco eco eco eco eco eco eco eco eco eco.</p>
-                </div>
-
-                <div class="feature-item">
-                    <i class="fa-solid fa-rotate-left"></i>
-                    <h4>Return</h4>
-                    <p>Return return return return return return.</p>
-                </div>
-
-            </div>
+    <section id="faq-section" style="padding: 40px; background-color: #f4f4f4; margin-top: 50px;">
+        <h2 style="text-align: center;">Online Shopping FAQ</h2>
+        <div style="max-width: 800px; margin: 0 auto;">
+            <p><strong>Is online shopping safe at NEON?</strong><br>Yes, we use industry-standard encryption to ensure your online shopping experience is secure.</p>
+            <p><strong>What are the benefits of tech online shopping?</strong><br>Online shopping at NEON gives you access to exclusive tech products and fast doorstep delivery.</p>
+            <p><strong>Do you offer international shipping?</strong><br>We currently offer domestic shipping and are expanding our online shopping reach globally soon.</p>
         </div>
     </section>
 
     <footer>
-        <div class="container">
-
-            <div class="footer-grid">
-
-                <div class="footer-brand">
-                    <a href="#" class="logo">NEON<span>.</span></a>
-
-                    <!-- repetitive low value content -->
-                    <p>Tech tech tech tech tech tech tech tech tech tech tech tech.</p>
-                </div>
-
-                <div class="footer-links">
-                    <h5>Links</h5>
-                    <ul>
-                        <li><a href="#">Link</a></li>
-                        <li><a href="#">Link</a></li>
-                    </ul>
-                </div>
-
-            </div>
-
-            <div class="footer-bottom">
-                <p>© NEON</p>
-
-                <div class="social-links">
-                    <a href="#">SOCIAL</a>
-                </div>
-            </div>
-
+        <div class="footer-logo">NEON.</div>
+        <p>Providing the best online shopping experience for future-ready tech since 2024. Innovation in every click.</p>
+        <div class="footer-links">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
         </div>
+        <p>&copy; 2026 NEON. All rights reserved.</p>
     </footer>
-
-    <script>
+<script>
         // no defer / async intentionally
 
         const products = [
@@ -217,6 +168,5 @@
             renderProducts();
         };
     </script>
-
 </body>
 </html>
