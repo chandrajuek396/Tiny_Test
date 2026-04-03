@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Shopping Insights | E-Commerce Blog Dashboard</title>
+    <meta name="description" content="Discover expert guides and hacks for online shopping, grocery savings, and mastering the digital marketplace in our modern blog dashboard.">
+    <style>
+        :root {
+            --primary: #2563eb;
+            --primary-hover: #1d4ed8;
+            --bg: #f8fafc;
+            --card-bg: #ffffff;
+            --text-main: #1e293b;
+            --text-muted: #64748b;
+            --border: #e2e8f0;
+            --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+            --shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+            --shadow-lg: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+            background-color: var(--bg);
+            color: var(--text-main);
+            line-height: 1.5;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        header {
+            background-color: var(--card-bg);
+            border-bottom: 1px solid var(--border);
+            padding: 2.5rem 1rem;
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        header h1 {
+            font-size: 2.25rem;
+            font-weight: 800;
+            color: #0f172a;
+            letter-spacing: -0.025em;
+        }
+
+        header p {
+            color: var(--text-muted);
+            margin-top: 0.5rem;
+            font-size: 1.1rem;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 1.5rem 5rem;
+        }
+
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+            gap: 2rem;
+        }
+
+        .blog-card {
+            background: var(--card-bg);
+            border-radius: 1.25rem;
+            overflow: hidden;
+            border: 1px solid var(--border);
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition);
+            display: flex;
+            flex-direction: column;
+            cursor: pointer;
+            position: relative;
+        }
+
+        .blog-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-lg);
+            border-color: var(--primary);
+        }
+
+        .blog-card-image {
+            width: 100%;
+            height: 200px;
+            background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary);
+            font-weight: 700;
+            font-size: 0.875rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .blog-card-body {
+            padding: 1.75rem;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+
+        .blog-card h2 {
+            font-size: 1.35rem;
+            font-weight: 700;
+            color: #0f172a;
+            margin-bottom: 1rem;
+            line-height: 1.3;
+        }
+
+        .blog-card p {
+            color: var(--text-muted);
+            font-size: 0.975rem;
+            margin-bottom: 2rem;
+            flex-grow: 1;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background-color: var(--primary);
+            color: white;
+            padding: 0.875rem 1.5rem;
+            border-radius: 0.75rem;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: var(--transition);
+            width: fit-content;
+        }
+
+        .btn:hover {
+            background-color: var(--primary-hover);
+            box-shadow: 0 4px 12px rgba(37, 99, 235, 0.2);
+        }
+
+        @media (max-width: 640px) {
+            .blog-grid {
+                grid-template-columns: 1fr;
+            }
+            header h1 {
+                font-size: 1.75rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Shopping Insights Dashboard</h1>
+        <p>Your ultimate destination for modern commerce trends & hacks.</p>
+    </header>
+
+    <main class="container">
+        <div class="blog-grid" id="blogGrid">
+            <!-- Featured Blog Card -->
+            <article class="blog-card">
+                <div class="blog-card-image">Featured Guide</div>
+                <div class="blog-card-body">
+                    <h2>The Ultimate Guide to Modern Online Shopping: Mastering Every E Store & Grocery Hack</h2>
+                    <p>Unlock the secrets of efficient digital shopping. Learn how to navigate complex e-commerce interfaces, leverage hidden grocery discounts, and master the art of the modern checkout process.</p>
+                    <a href="blogs/modern-online-shopping-guide.html" class="btn">Read Full Story</a>
+                </div>
+            </article>
+        </div>
+    </main>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const cards = document.querySelectorAll('.blog-card');
+            
+            cards.forEach(card => {
+                // Click card to navigate
+                card.addEventListener('click', (e) => {
+                    if (e.target.tagName !== 'A') {
+                        const link = card.querySelector('a').href;
+                        window.location.href = link;
+                    }
+                });
+
+                // Interaction: Scale effect on click
+                card.addEventListener('mousedown', () => {
+                    card.style.transform = 'scale(0.97) translateY(-8px)';
+                });
+
+                card.addEventListener('mouseup', () => {
+                    card.style.transform = 'translateY(-8px)';
+                });
+
+                card.addEventListener('mouseleave', () => {
+                    card.style.transform = '';
+                });
+            });
+        });
+    </script>
+</body>
+</html>
